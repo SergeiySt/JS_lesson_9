@@ -9,6 +9,24 @@
 </head>
 
 <body>
+    <h1>Color Palette</h1>
+    <div id="color-list">
+        <!-- Сюди буде вставлений список кольорів -->
+    </div>
+    <h2>Add a New Color</h2>
+    <form id="color-form">
+        <label for="color-name">Назва:</label>
+        <input type="text" id="color-name" required>
+        <label for="color-type">Тип:</label>
+        <select id="color-type" required>
+            <option value="RGB">RGB</option>
+            <option value="RGBA">RGBA</option>
+            <option value="HEX">HEX</option>
+        </select>
+        <label for="color-code">Код кольору:</label>
+        <input type="text" id="color-code" required>
+        <button type="submit" id="save-color">Save</button>
+    </form>
 
     <script src=" script.js"></script>
 </body>
