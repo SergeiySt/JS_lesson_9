@@ -3,7 +3,7 @@ function saveColorsToCookie(colors) {
     document.cookie = `colors=${jsonString}; expires= ${new Date(new Date().getTime() + 3 * 60 * 60 * 1000).toUTCString()}`;
 }
 
-// Функція для завантаження кольорів з Cookie
+
 function loadColorsFromCookie() {
     const cookies = document.cookie.split(';');
     for (const cookie of cookies) {
@@ -24,7 +24,7 @@ const saveColorButton = document.getElementById('save-color');
 
 let colors = loadColorsFromCookie();
 
-// Функція для відображення колекції кольорів на сторінці
+
 function displayColors() {
     colorList.innerHTML = '';
     colors.forEach(color => {
@@ -35,13 +35,13 @@ function displayColors() {
     });
 }
 
-// Функція для перевірки правильності введених даних та додавання нового кольору
+
 function addColor() {
     const name = colorNameInput.value;
     const type = colorTypeSelect.value;
     const code = colorCodeInput.value;
 
-    // Перевірка, чи існує колір з такою ж назвою
+
     const existingColor = colors.find(color => color.name.toLowerCase() === name.toLowerCase());
 
     if (existingColor) {
